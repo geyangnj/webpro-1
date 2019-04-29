@@ -9,7 +9,7 @@
 <!-- action跳转的目标地址：ProductServlet地址在web.xml中有配置-->
 <form action="/webpro/ProductServlet" method="post">
     <!-- 后台是通过name属性指定的值,来进行数据的获取 -->
-    商品名:<input type="text" name="aa"/><br/>
+    商品名:<input type="text" name="name"/><br/>
     商品价格:<input type="text" name="price"/><br/>
     商品备注:<input type="text" name="remark"/></br>
     <button type="submit">添加商品</button>

@@ -3,6 +3,8 @@ package cn.service;
 import cn.dao.ProductDao;
 import cn.model.Product;
 
+import java.util.ArrayList;
+
 // ProductService ---> ProductDao -->  JdbcUtils ----> db数据库
 public class ProductService {
 
@@ -12,5 +14,10 @@ public class ProductService {
     public void save(Product product){
         // 以后会添加业务逻辑代码,处理完毕之后再调用数据访问层
         productDao.save(product);
+    }
+
+    public ArrayList<Product> queryByName(String name) {
+        //  把查询的关键字分词，就属于业务逻辑
+        return productDao.queryByName(name);
     }
 }

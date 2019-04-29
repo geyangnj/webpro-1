@@ -3,4 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <servlet>
+        <!-- 逻辑名,可以代替真实类名 -->
+        <servlet-name>ProductServlet</servlet-name>
+        <!--真实的类名: 包名.类名 -->
+        <servlet-class>cn.servlet.ProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <!-- 此名称同一定要与上面的逻辑名相同-->
+        <servlet-name>ProductServlet</servlet-name>
+        <!-- 访问当前Sevlet的路径 -->
+        <url-pattern>/ProductServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

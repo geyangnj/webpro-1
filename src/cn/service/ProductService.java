@@ -20,4 +20,12 @@ public class ProductService {
         //  把查询的关键字分词，就属于业务逻辑
         return productDao.queryByName(name);
     }
+
+    public void update(Product product) {
+        productDao.update(product);
+    }
+
+    public void delete(int id) {
+        productDao.delete(id);
+    }
 }

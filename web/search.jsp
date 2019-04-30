@@ -9,6 +9,7 @@
 <form action="/webpro/ProductServlet" method="get">
     查询关键字:<input type="text" name="keyword"/>
     <button type="submit">给我搜</button>
+    <input type="hidden" name="type" value="query" />
 </form>
 <!-- 如果要编写java代码则需要代码声明 -->
 <table border="1" width="600px">
@@ -31,7 +32,9 @@
             <td>${product.name}</td>
             <td>${product.price}</td>
             <td>${product.remark}</td>
-            <td>删除|更新</td>
+            <td>
+                <!-- 在a标签中,地址与参数之间用?隔开所有参数之间&隔开 -->
+                <a href="/webpro/ProductServlet?id=${product.id}&type=delete"> 删除</a>|更新</td>
         </tr>
     </c:forEach>
 </table>

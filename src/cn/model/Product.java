@@ -4,11 +4,19 @@ import java.util.Date;
 
 //  1：类 --> 表     对象 --> 记录    类的属性 --> 表字段
 public class Product {
+
     private int id;
     private String name;
     private double price;
     private String remark;
     private Date date;
+
+    public static void main(String[] args) {
+        Product p1 = new Product();
+        p1.setName("AA");
+        p1.setName("BB");
+        System.out.print(p1.getName());
+    }
 
     @Override
     public String toString() {

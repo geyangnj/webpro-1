@@ -12,7 +12,10 @@
     商品名:<input type="text" name="name"/><br/>
     商品价格:<input type="text" name="price"/><br/>
     商品备注:<input type="text" name="remark"/></br>
+    <input type="hidden" name="type" value="save" />
     <button type="submit">添加商品</button>
+    <button type="button">我是普通按钮</button>
+    <button type="reset">重置按钮</button>
 </form>
 </body>
 </html>
